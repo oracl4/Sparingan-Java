@@ -35,4 +35,13 @@ public class DatabaseUser {
         }
         throw new UserNotFoundException(id);
     }
+    public static User getUserLogin(String email, String password){
+        for (User UserPtr : USER_DATABASE){
+            if (UserPtr.getEmail().equals(email) && UserPtr.getPassword().equals(password))
+            {
+                return UserPtr;
+            }
+        }
+        return null;
+    }
 }
