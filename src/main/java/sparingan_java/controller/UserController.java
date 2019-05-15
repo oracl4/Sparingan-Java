@@ -7,7 +7,6 @@ import java.util.regex.*;
 import javax.xml.crypto.Data;
 
 @RestController
-
 public class UserController {
     @RequestMapping(value = "/newuser", method = RequestMethod.POST)
     public User newUser(@RequestParam(value = "name") String name,
@@ -16,7 +15,6 @@ public class UserController {
                         @RequestParam(value = "password") String password,
                         @RequestParam(value = "email") String email
     )
-
     {
         if(!checkEmail(email)){
             return null;
@@ -34,7 +32,7 @@ public class UserController {
 
     @RequestMapping(value="/loginuser", method=RequestMethod.POST)
     public User loginUser (@RequestParam(value="email") String email,
-                               @RequestParam(value="password") String password
+                            @RequestParam(value="password") String password
     )
     {
         User customerReply = DatabaseUser.getUserLogin(email,password);
@@ -54,10 +52,7 @@ public class UserController {
 
 
     public boolean checkEmail(String email){
-        String pattern =  "^[a-zA-Z0-9_+&*-]+(?:\\."+
-                "[a-zA-Z0-9_+&*-]+)*@" +
-                "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
-                "A-Z]{2,7}$";
+        String pattern =  ".*";
         Pattern p = Pattern.compile(pattern);
         Matcher m = p.matcher(email);
         if (m.find()) {

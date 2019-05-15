@@ -1,5 +1,6 @@
 package sparingan_java;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public class Schedule {
@@ -7,13 +8,13 @@ public class Schedule {
 
     private Sport sport;
     private Location location;
-    private Date date;
+    private Calendar date;
     private User user1;
     private User user2;
     private boolean isActive;
 
     //Constructor Schedule, pertama-tama cuma masukin user yang bikin, nanti pas matching kalo match ya masukin user2
-    public Schedule(Sport sport, Date date,Location location, User user1) {
+    public Schedule(Sport sport, Calendar date, Location location, User user1) {
         this.sport = sport;
         this.location = location;
         this.date = date;
@@ -46,11 +47,11 @@ public class Schedule {
         this.location = location;
     }
 
-    public Date getDate() {
+    public Calendar getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(Calendar date) {
         this.date = date;
     }
 
@@ -89,7 +90,7 @@ public class Schedule {
         return "Schedule{" +
                 "id=" + id +
                 ", sport=" + sport.toString() +
-                ", location=" + location.getName() +
+                ", location=" + location.toString() +
                 ", date=" + date +
                 ", user1=" + user1.getName() +
                 ", user2=" + tempString +

@@ -8,7 +8,8 @@ public class UserNotFoundException extends Exception {
         this.user_error = user_error;
     }
 
-    public String getExMessage(){
+    public String getExMessage()
+    {
         return super.getMessage() + user_error + " not found in the Database";
     }
 

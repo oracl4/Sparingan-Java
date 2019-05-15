@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class DatabaseUser {
     private static ArrayList<User> USER_DATABASE = new ArrayList<>();
-    private static int LAST_USER_ID = 1;
+    private static int LAST_USER_ID = 0;
 
     public static ArrayList<User> getUserDatabase() {
         return USER_DATABASE;

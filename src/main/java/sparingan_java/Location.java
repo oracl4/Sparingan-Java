@@ -1,36 +1,17 @@
 package sparingan_java;
 
-public class Location {
-    public String city, name;
-    public Sport sport;
+public enum Location {
+    JAKARTA("Jakarta"),
+    DEPOK("Depok"),
+    BOGOR("Bogor"),
+    BANDUNG("Bandung");
 
-    public Location(String city, String name, Sport sport) {
-        this.city = city;
-        this.name = name;
-        this.sport = sport;
+    private String location;
+
+    Location(String location){
+        this.location = location;
     }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Sport getSport() {
-        return sport;
-    }
-
-    public void setSport(Sport sport) {
-        this.sport = sport;
+    public String toString(){
+        return location;
     }
 }
