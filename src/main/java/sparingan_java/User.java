@@ -3,13 +3,8 @@ package sparingan_java;
 import java.util.ArrayList;
 
 public class User {
-
-    //Rating bikin class baru aja kali ya
-    //Location mungkin bisa pake free map api ngambil JSON nya
-    //Favourite Sport pake Enum juga bisa (bikin enum sport)
     private String name, location, phoneNumber, password,email;
     private int id;
-    //private Sport sport;
     private Rating rating;
     private Schedule userSchedules;
 

@@ -13,11 +13,20 @@ public class DatabaseUser {
         return LAST_USER_ID;
     }
 
-    public static boolean addUser(User user) {
+    public static boolean addUser(User user) throws UserAlreadyExistsException {
+        for (User userTemp : USER_DATABASE )
+        {
+            if(((user.getPhoneNumber().equals(userTemp.getPhoneNumber()))
+                    || (user.getEmail().equals(userTemp.getEmail()))))
+            {
+                throw new UserAlreadyExistsException(user);
+            }
+        }
         USER_DATABASE.add(user);
         LAST_USER_ID = user.getId();
         return true;
     }
+
     public static User getUser(int id) throws UserNotFoundException{
         for(User user : USER_DATABASE){
             if(user.getId() == id){

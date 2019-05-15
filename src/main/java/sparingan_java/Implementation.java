@@ -1,4 +1,5 @@
 package sparingan_java;
+
 import java.util.Date;
 
 public class Implementation {
