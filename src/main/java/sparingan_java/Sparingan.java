@@ -5,6 +5,8 @@ import java.util.Date;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import javax.xml.crypto.Data;
+
 @SpringBootApplication
 public class Sparingan {
     public Sparingan(){
@@ -13,11 +15,19 @@ public class Sparingan {
 
     public static void main(String[] args){
         try {
-            DatabaseUser.addUser(new User("Mahdi", "Bekasi", "081310275390", "4ltius", "it.mahdi.yusuf@gmail.com"));
-            DatabaseUser.addUser(new User("Gilang", "Bogor", "081310275391", "4ltius", "it.gilang.yudharaka@gmail.com"));
-            DatabaseUser.addUser(new User("Michael", "Jakarta", "081310275392", "4ltius", "it.michael.wijaya@gmail.com"));
+            DatabaseUser.addUser(new SoloUser("Mahdi", "Bekasi", "081310275390", "4ltius", "it.mahdi.yusuf@gmail.com"));
+            System.out.println(DatabaseUser.getUser(DatabaseUser.getLastUserId()));
+            DatabaseUser.addUser(new SoloUser("Gilang", "Bogor", "081310275391", "4ltius", "it.gilang.yudharaka@gmail.com"));
+            System.out.println(DatabaseUser.getUser(DatabaseUser.getLastUserId()));
+            DatabaseUser.addUser(new TeamUser("Michael", "Jakarta", "081310275392", "4ltius", "it.michael.wijaya@gmail.com"));
+            System.out.println(DatabaseUser.getUser(DatabaseUser.getLastUserId()));
+            ((TeamUser)DatabaseUser.getUser(3)).addMember(DatabaseUser.getUser(2));
+            ((TeamUser)DatabaseUser.getUser(3)).addMember(DatabaseUser.getUser(1));
+            System.out.println(DatabaseUser.getUser(3));
         } catch (UserAlreadyExistsException e) {
             e.getExMessage();
+        } catch (UserNotFoundException e) {
+            e.printStackTrace();
         }
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd MMMM yyyy");
@@ -27,10 +37,6 @@ public class Sparingan {
         System.out.println(sdf.format(date2));
 
         Sport sportTest = Sport.valueOf("FUTSAL");
-
-        //Implementation.findMatch(sportTest, date1, Location.BANDUNG, 1);
-        //Implementation.findMatch(sportTest, date2, Location.BANDUNG, 2);
-        //Implementation.findMatch(sportTest, date2, Location.BANDUNG, 3);
 
         for(Schedule schedulePtr : DatabaseSchedule.getScheduleDatabase()) {
             System.out.println(schedulePtr);

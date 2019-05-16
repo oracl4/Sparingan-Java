@@ -23,7 +23,9 @@ public class Implementation {
                 }
                 schedulePtr.setIsActive(true);
                 schedulePtr.getUser1().setIsScheduled(true);
+                schedulePtr.getUser1().setUserSchedules(schedulePtr);
                 schedulePtr.getUser2().setIsScheduled(true);
+                schedulePtr.getUser2().setUserSchedules(schedulePtr);
                 return schedulePtr;
             }
         }

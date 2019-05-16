@@ -2,6 +2,7 @@ package sparingan_java;
 public class Rating {
     private User user;
     private String feedback;
+
     private double rating;
 
     public Rating(User user) {
@@ -30,5 +31,13 @@ public class Rating {
 
     public void setRating(double rating) {
         this.rating = rating;
+    }
+
+    public String toString() {
+        return "Rating{" +
+                "user=" + user +
+                ", feedback='" + feedback + '\'' +
+                ", rating=" + rating +
+                '}';
     }
 }

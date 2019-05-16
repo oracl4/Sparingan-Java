@@ -2,11 +2,12 @@ package sparingan_java;
 
 import java.util.ArrayList;
 
-public class User {
+public abstract class User {
     private String name, location, phoneNumber, password,email;
     private int id;
     private Rating rating;
     private Schedule userSchedules;
+    private UserType userType;
 
     private boolean isScheduled;
 
@@ -24,10 +25,8 @@ public class User {
         this.phoneNumber = phoneNumber;
         this.password = password;
         this.email = email;
-        //this.sport = sport;
-        //Rating.setRating(0);
-        id = DatabaseUser.getLastUserId() + 1;
         this.isScheduled=false;
+        this.id = DatabaseUser.getLastUserId() + 1;
     }
 
     public String getName() {
@@ -77,6 +76,20 @@ public class User {
     public void setId(int id) {
         this.id = id;
     }
+
+    public Schedule getUserSchedules() {
+        return userSchedules;
+    }
+
+    public void setUserSchedules(Schedule userSchedules) {
+        this.userSchedules = userSchedules;
+    }
+
+    public abstract String toString();
+
+    //public abstract void addMember();
+
+    //public abstract void removeMember();
 
     /*public Sport getSport() {
         return sport;

@@ -1,4 +1,5 @@
-package sparingan_java.controller;
+package sparingan_java.Controller;
+
 import org.springframework.web.bind.annotation.*;
 import sparingan_java.*;
 import java.util.*;
@@ -13,21 +14,38 @@ public class UserController {
                         @RequestParam(value = "location") String location,
                         @RequestParam(value = "phoneNumber") String phoneNumber,
                         @RequestParam(value = "password") String password,
-                        @RequestParam(value = "email") String email
+                        @RequestParam(value = "email") String email,
+                        @RequestParam(value = "usertype") String usertype
     )
     {
-        if(!checkEmail(email)){
+        if(!checkEmail(email)) {
             return null;
         }
-        User user = new User(name, location, phoneNumber, password, email);
-        try {
-            DatabaseUser.addUser(user);
-        } catch(Exception ex) {
-            ex.getMessage();
-            return null;
-        };
-        return user;
 
+        UserType tempUserType = UserType.valueOf(usertype);
+        //Create Solo
+        if(tempUserType.equals(UserType.SOLO)){
+            try {
+                DatabaseUser.addUser(new SoloUser(name, location, phoneNumber, password, email));
+                return DatabaseUser.getUser(DatabaseUser.getLastUserId());
+            } catch (UserAlreadyExistsException e) {
+                e.getExMessage();
+            } catch (UserNotFoundException e) {
+                e.getExMessage();
+            }
+        }
+        //Create Team
+        else if(tempUserType.equals(UserType.TEAM)){
+            try {
+                DatabaseUser.addUser(new TeamUser(name, location, phoneNumber, password, email));
+                return DatabaseUser.getUser(DatabaseUser.getLastUserId());
+            } catch (UserAlreadyExistsException e) {
+                e.getExMessage();
+            } catch (UserNotFoundException e) {
+                e.getExMessage();
+            }
+        }
+        return null;
     }
 
     @RequestMapping(value="/loginuser", method=RequestMethod.POST)
@@ -50,6 +68,22 @@ public class UserController {
         return user;
     }
 
+    @RequestMapping(value="/addmember", method=RequestMethod.POST)
+    public User loginUser (@RequestParam(value="teamid") int teamid,
+                           @RequestParam(value="newmemberid") int newmemberid
+    )
+    {
+        try {
+            User tempUser = DatabaseUser.getUser(teamid);
+            if(tempUser instanceof TeamUser && newmemberid != teamid){
+                ((TeamUser)tempUser).addMember(DatabaseUser.getUser(newmemberid));
+                return tempUser;
+            }
+        } catch (UserNotFoundException e) {
+            e.getExMessage();
+        }
+        return null;
+    }
 
     public boolean checkEmail(String email){
         String pattern =  ".*";
