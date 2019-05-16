@@ -2,11 +2,9 @@ package sparingan_java.Controller;
 
 import org.springframework.web.bind.annotation.*;
 import sparingan_java.*;
-import java.util.*;
-import java.text.SimpleDateFormat;
 import java.util.regex.*;
-import javax.xml.crypto.Data;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 public class UserController {
     @RequestMapping(value = "/newuser", method = RequestMethod.POST)
@@ -23,6 +21,7 @@ public class UserController {
         }
 
         UserType tempUserType = UserType.valueOf(usertype);
+
         //Create Solo
         if(tempUserType.equals(UserType.SOLO)){
             try {

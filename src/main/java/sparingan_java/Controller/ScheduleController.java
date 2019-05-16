@@ -11,6 +11,7 @@ public class ScheduleController {
     //Schedule List
     @RequestMapping(value = "/schedulelist", method = RequestMethod.GET)
     public ArrayList<Schedule> scheduleList() {
+        ArrayList<Schedule> obj = DatabaseSchedule.getScheduleDatabase();
         return DatabaseSchedule.getScheduleDatabase();
     }
 

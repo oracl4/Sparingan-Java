@@ -6,7 +6,7 @@ public abstract class User {
     private String name, location, phoneNumber, password,email;
     private int id;
     private Rating rating;
-    private Schedule userSchedules;
+    //private Schedule userSchedules;
     private UserType userType;
 
     private boolean isScheduled;
@@ -77,13 +77,14 @@ public abstract class User {
         this.id = id;
     }
 
-    public Schedule getUserSchedules() {
+    /*public Schedule getUserSchedules() {
         return userSchedules;
     }
 
     public void setUserSchedules(Schedule userSchedules) {
         this.userSchedules = userSchedules;
     }
+     */
 
     public abstract String toString();
 

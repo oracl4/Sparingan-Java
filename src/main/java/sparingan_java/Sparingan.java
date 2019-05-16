@@ -1,7 +1,10 @@
 package sparingan_java;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -21,8 +24,8 @@ public class Sparingan {
             System.out.println(DatabaseUser.getUser(DatabaseUser.getLastUserId()));
             DatabaseUser.addUser(new TeamUser("Michael", "Jakarta", "081310275392", "4ltius", "it.michael.wijaya@gmail.com"));
             System.out.println(DatabaseUser.getUser(DatabaseUser.getLastUserId()));
-            ((TeamUser)DatabaseUser.getUser(3)).addMember(DatabaseUser.getUser(2));
-            ((TeamUser)DatabaseUser.getUser(3)).addMember(DatabaseUser.getUser(1));
+            //((TeamUser)DatabaseUser.getUser(3)).addMember(DatabaseUser.getUser(2));
+            //((TeamUser)DatabaseUser.getUser(3)).addMember(DatabaseUser.getUser(1));
             System.out.println(DatabaseUser.getUser(3));
         } catch (UserAlreadyExistsException e) {
             e.getExMessage();
@@ -31,16 +34,20 @@ public class Sparingan {
         }
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd MMMM yyyy");
-        Date date1 = new Date();
-        Date date2 = new Date();
-        System.out.println(sdf.format(date1));
-        System.out.println(sdf.format(date2));
+        Calendar date1 = new GregorianCalendar(1998, 1, 12);
+        //Calendar date2 = new GregorianCalendar();
+        //System.out.println(sdf.format(date1));
+        //System.out.println(sdf.format(date2));
 
         Sport sportTest = Sport.valueOf("FUTSAL");
+
+        Implementation.findMatch(Sport.FUTSAL, date1, Location.BANDUNG, 1);
+        Implementation.findMatch(Sport.FUTSAL, date1, Location.BANDUNG, 2);
 
         for(Schedule schedulePtr : DatabaseSchedule.getScheduleDatabase()) {
             System.out.println(schedulePtr);
         }
+
         SpringApplication.run(Sparingan.class, args);
     }
 }

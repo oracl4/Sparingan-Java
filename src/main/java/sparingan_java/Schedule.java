@@ -1,5 +1,6 @@
 package sparingan_java;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -87,11 +88,12 @@ public class Schedule {
         else{
             tempString = user2.getName();
         }
+        SimpleDateFormat sdf = new SimpleDateFormat("dd MMMM yyyy");
         return "Schedule{" +
                 "id=" + id +
                 ", sport=" + sport.toString() +
                 ", location=" + location.toString() +
-                ", date=" + date +
+                ", date=" + sdf.format(date.getTime()) +
                 ", user1=" + user1.getName() +
                 ", user2=" + tempString +
                 ", isActive=" + isActive +

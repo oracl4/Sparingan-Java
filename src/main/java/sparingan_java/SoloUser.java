@@ -14,7 +14,6 @@ public class SoloUser extends User {
                 ", password='" + getPassword() + '\'' +
                 ", email='" + getEmail() + '\'' +
                 ", id=" + getId() +
-                ", userSchedules=" + getUserSchedules() +
                 ", isScheduled=" + getIsScheduled() +
                 '}';
     }

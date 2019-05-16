@@ -25,7 +25,6 @@ public class TeamUser extends User {
                             ", password='" + getPassword() + '\'' +
                             ", email='" + getEmail() + '\'' +
                             ", id=" + getId() +
-                            ", userSchedules=" + getUserSchedules() +
                             ", isScheduled=" + getIsScheduled() +
                             '}';
         int i=0;
@@ -38,7 +37,6 @@ public class TeamUser extends User {
                         ", password='" + userPtr.getPassword() + '\'' +
                         ", email='" + userPtr.getEmail() + '\'' +
                         ", id=" + userPtr.getId() +
-                        ", userSchedules=" + userPtr.getUserSchedules() +
                         ", isScheduled=" + userPtr.getIsScheduled() +
                         '}';
                 i++;
