@@ -4,7 +4,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * ......java - kelas untuk
+ * Implementation.java - kelas untuk fungsi pembanding dan pencocok match antara User
  * @author  Gilang Yudharaka,Luthfi Faisal, Mahdi Yusuf,Michael Wijaya, Naufal Ikhsan
  * @version 2.0
  * @since 2019-05-17
@@ -14,8 +14,18 @@ public class Implementation {
     public Implementation(){
     }
 
+    /**
+     * method untuk melakukan pembandingan dan pencocokan antara user dengan menggunakan informasi dari schedule setiap user
+     * @param sport
+     * @param date
+     * @param location
+     * @param userID
+     * @return null
+     */
     public static Schedule findMatch(Sport sport, Calendar date, Location location, int userID) {
-        //Find in Database
+        /**
+         * mengambil jadwal user
+         */
         for (Schedule schedulePtr : DatabaseSchedule.getScheduleDatabase()) {
             if (schedulePtr.getDate().equals(date) &&
                     schedulePtr.getLocation().equals(location) &&
@@ -35,6 +45,9 @@ public class Implementation {
                 return schedulePtr;
             }
         }
+        /**
+         * jika tidak ada yanng match dengan jadwal maka dikembalikan ke databaseSchedule untuk daftar tunggu
+         */
         try {
             DatabaseSchedule.addSchedule(new Schedule(sport, date, location, DatabaseUser.getUser(userID)));
             return DatabaseSchedule.getSchedule(DatabaseSchedule.getLastScheduleId());
@@ -43,6 +56,9 @@ public class Implementation {
         } catch (ScheduleNotFoundException e) {
             e.getExMessage();
         }
+        /**
+         * dilakukan pengembalian nilai null agar tidak infinite loop
+         */
         return null;
     }
 }

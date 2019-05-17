@@ -2,7 +2,7 @@
 package sparingan_java;
 
 /**
- * ......java - kelas untuk
+ * Sport.java - kelas untuk enum pilhan jenis olahraga yang dimainkan
  * @author  Gilang Yudharaka,Luthfi Faisal, Mahdi Yusuf,Michael Wijaya, Naufal Ikhsan
  * @version 2.0
  * @since 2019-05-17
