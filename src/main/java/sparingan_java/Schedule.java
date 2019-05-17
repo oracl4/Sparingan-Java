@@ -1,9 +1,15 @@
-package sparingan_java;
 
+package sparingan_java;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * ......java - kelas untuk
+ * @author  Gilang Yudharaka,Luthfi Faisal, Mahdi Yusuf,Michael Wijaya, Naufal Ikhsan
+ * @version 2.0
+ * @since 2019-05-17
+ */
 public class Schedule {
     private int id;
 

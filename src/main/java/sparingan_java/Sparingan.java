@@ -1,3 +1,4 @@
+
 package sparingan_java;
 
 import java.text.SimpleDateFormat;
@@ -10,6 +11,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.xml.crypto.Data;
 
+/**
+ * ......java - kelas untuk
+ * @author  Gilang Yudharaka,Luthfi Faisal, Mahdi Yusuf,Michael Wijaya, Naufal Ikhsan
+ * @version 2.0
+ * @since 2019-05-17
+ */
 @SpringBootApplication
 public class Sparingan {
     public Sparingan(){

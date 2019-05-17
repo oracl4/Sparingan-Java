@@ -1,7 +1,13 @@
 package sparingan_java;
 
-import java.util.ArrayList;
 
+import java.util.ArrayList;
+/**
+ * ......java - kelas untuk
+ * @author  Gilang Yudharaka,Luthfi Faisal, Mahdi Yusuf,Michael Wijaya, Naufal Ikhsan
+ * @version 2.0
+ * @since 2019-05-17
+ */
 public class TeamUser extends User {
     public ArrayList<User> teamGroup = new ArrayList<>();
 
