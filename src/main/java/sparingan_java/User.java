@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public abstract class User {
     private String name, location, phoneNumber, password,email;
     private int id;
-    private Rating rating;
+    private double rating;
     //private Schedule userSchedules;
     private UserType userType;
 
@@ -27,6 +27,7 @@ public abstract class User {
         this.email = email;
         this.isScheduled=false;
         this.id = DatabaseUser.getLastUserId() + 1;
+        rating = 0;
     }
 
     public String getName() {
@@ -35,6 +36,16 @@ public abstract class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public double getRating(){
+        if(DatabaseRating.getRating(id) != null){
+            for (Rating rate : DatabaseRating.getRating(id)){
+                rating = rating + rate.getRating();
+            }
+            rating = rating / DatabaseRating.getRating(id).size();
+        }
+        return rating;
     }
 
     public String getLocation() {
