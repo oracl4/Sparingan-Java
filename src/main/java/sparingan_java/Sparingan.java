@@ -20,7 +20,6 @@ import javax.xml.crypto.Data;
 @SpringBootApplication
 public class Sparingan {
     public Sparingan(){
-
     }
 
     /**
@@ -75,9 +74,9 @@ public class Sparingan {
             System.out.println(schedulePtr);
         }
 
-        Implementation.finishSchedule(1, 1);
-        Implementation.finishSchedule(1, 2);
+        //Implementation.finishSchedule(1, 1);
+        //Implementation.finishSchedule(1, 2);
 
-        //SpringApplication.run(Sparingan.class, args);
+        SpringApplication.run(Sparingan.class, args);
     }
 }

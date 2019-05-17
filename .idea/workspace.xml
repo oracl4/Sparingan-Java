@@ -1,47 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+    <option name="SCOPE_TYPE" value="4" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3aecaed8-49e3-42d7-87e1-79fc42605d8d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sparingan_java/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sparingan_java/Controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sparingan_java/Controller/ScheduleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sparingan_java/Controller/ScheduleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sparingan_java/DatabaseRating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sparingan_java/DatabaseRating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sparingan_java/DatabaseSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sparingan_java/DatabaseSchedule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sparingan_java/DatabaseUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sparingan_java/DatabaseUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sparingan_java/Implementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sparingan_java/Implementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sparingan_java/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sparingan_java/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sparingan_java/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sparingan_java/Rating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sparingan_java/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sparingan_java/Schedule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sparingan_java/ScheduleNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sparingan_java/ScheduleNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sparingan_java/SoloUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sparingan_java/SoloUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sparingan_java/Sparingan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sparingan_java/Sparingan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sparingan_java/Sport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sparingan_java/Sport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sparingan_java/TeamUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sparingan_java/TeamUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sparingan_java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sparingan_java/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sparingan_java/UserAlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sparingan_java/UserAlreadyExistsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sparingan_java/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sparingan_java/UserNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sparingan_java/UserType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sparingan_java/UserType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sparingan_java/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sparingan_java/controller/UserController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -98,100 +66,7 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sparingan_java/DatabaseRating.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sparingan_java/Controller/RatingController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sparingan_java/Implementation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sparingan_java/Rating.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="73" column="1" lean-forward="true" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
-              <folding>
-                <element signature="e#626#627#0" expanded="true" />
-                <element signature="e#657#658#0" expanded="true" />
-                <element signature="e#797#798#0" expanded="true" />
-                <element signature="e#837#838#0" expanded="true" />
-                <element signature="e#954#955#0" expanded="true" />
-                <element signature="e#985#986#0" expanded="true" />
-                <element signature="e#1027#1028#0" expanded="true" />
-                <element signature="e#1067#1068#0" expanded="true" />
-                <element signature="e#1193#1194#0" expanded="true" />
-                <element signature="e#1222#1223#0" expanded="true" />
-                <element signature="e#1350#1351#0" expanded="true" />
-                <element signature="e#1386#1387#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sparingan_java/Controller/ScheduleController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sparingan_java/Controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="6" selection-end-line="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sparingan_java/Controller/MainController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -217,15 +92,15 @@
         <option value="$PROJECT_DIR$/src/main/java/sparingan_java/TeamUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/sparingan_java/Controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/sparingan_java/controller/RatingController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sparingan_java/Sparingan.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sparingan_java/Implementation.java" />
         <option value="$PROJECT_DIR$/src/main/java/sparingan_java/DatabaseRating.java" />
         <option value="$PROJECT_DIR$/src/main/java/sparingan_java/SoloUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/sparingan_java/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/sparingan_java/Controller/ScheduleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/sparingan_java/Controller/RatingController.java" />
         <option value="$PROJECT_DIR$/src/main/java/sparingan_java/Rating.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sparingan_java/Sparingan.java" />
         <option value="$PROJECT_DIR$/src/main/java/sparingan_java/Controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sparingan_java/Implementation.java" />
       </list>
     </option>
   </component>
@@ -253,12 +128,6 @@
               <item name="sparingan-java" type="58d84e3e:PackageViewProjectNode" />
               <item name="sparingan-java.main" type="616d4139:PackageViewModuleNode" />
               <item name="sparingan_java" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="sparingan-java" type="58d84e3e:PackageViewProjectNode" />
-              <item name="sparingan-java.main" type="616d4139:PackageViewModuleNode" />
-              <item name="sparingan_java" type="1f31426a:PackageElementNode" />
-              <item name="Controller" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -330,9 +199,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.25416037" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.25416037" />
       <window_info id="Structure" order="1" sideWeight="0.502439" side_tool="true" weight="0.24962178" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -342,7 +210,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29296234" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29296234" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -476,16 +344,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sparingan_java/Schedule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sparingan_java/DatabaseSchedule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -511,16 +369,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sparingan_java/Sparingan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -625,10 +473,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sparingan_java/Schedule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sparingan_java/Controller/ScheduleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        <state relative-caret-position="213">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sparingan_java/Sparingan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sparingan_java/Controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -637,18 +515,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sparingan_java/Implementation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sparingan_java/Controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="282">
+          <caret line="99" column="1" selection-start-line="99" selection-start-column="1" selection-end-line="99" selection-end-column="1" />
         </state>
       </provider>
     </entry>

@@ -39,9 +39,9 @@ public class Implementation {
                 }
                 schedulePtr.setIsActive(true);
                 schedulePtr.getUser1().setIsScheduled(true);
-                //schedulePtr.getUser1().setUserSchedules(schedulePtr);
+                schedulePtr.getUser1().setScheduleID(schedulePtr.getId());
                 schedulePtr.getUser2().setIsScheduled(true);
-                //schedulePtr.getUser2().setUserSchedules(schedulePtr);
+                schedulePtr.getUser2().setScheduleID(schedulePtr.getId());
                 return schedulePtr;
             }
         }
@@ -65,11 +65,11 @@ public class Implementation {
     public static boolean finishSchedule(int idSchedule, int idUser){
         try {
             //Check if User isn't have schedule or the Schedule is inactive > Failed
-            if(DatabaseUser.getUser(idSchedule).getIsScheduled() ||
+            if(!DatabaseUser.getUser(idUser).getIsScheduled() ||
                     !DatabaseSchedule.getSchedule(idSchedule).getIsActive()){
+                System.out.println("System Failed!");
                 return false;
             }
-
             //User1 Finish
             if(DatabaseSchedule.getSchedule(idSchedule).getUser1().getId() == idUser){
                 System.out.println("Removed User1");
