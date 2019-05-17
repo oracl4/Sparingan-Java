@@ -61,4 +61,40 @@ public class Implementation {
          */
         return null;
     }
+
+    public static boolean finishSchedule(int idSchedule, int idUser){
+        try {
+            //Check if User isn't have schedule or the Schedule is inactive > Failed
+            if(DatabaseUser.getUser(idSchedule).getIsScheduled() ||
+                    !DatabaseSchedule.getSchedule(idSchedule).getIsActive()){
+                return false;
+            }
+
+            //User1 Finish
+            if(DatabaseSchedule.getSchedule(idSchedule).getUser1().getId() == idUser){
+                System.out.println("Removed User1");
+                DatabaseSchedule.getSchedule(idSchedule).getUser1().setIsScheduled(false);
+                DatabaseSchedule.getSchedule(idSchedule).getUser1().setScheduleID(0);
+                DatabaseSchedule.getSchedule(idSchedule).setUser1(null);
+            }
+            //User 2 Finish
+            else if(DatabaseSchedule.getSchedule(idSchedule).getUser2().getId() == idUser){
+                System.out.println("Removed User2");
+                DatabaseSchedule.getSchedule(idSchedule).getUser2().setIsScheduled(false);
+                DatabaseSchedule.getSchedule(idSchedule).getUser2().setScheduleID(0);
+                DatabaseSchedule.getSchedule(idSchedule).setUser2(null);
+            }
+            //Remove the Schedule if User1 dan User2 NULL
+            if(DatabaseSchedule.getSchedule(idSchedule).getUser1() == null &&
+                    DatabaseSchedule.getSchedule(idSchedule).getUser2() == null){
+                System.out.println("Removed Schedule");
+                DatabaseSchedule.removeSchedule(idSchedule);
+            }
+        } catch (ScheduleNotFoundException e) {
+            e.getExMessage();
+        } catch (UserNotFoundException e) {
+            e.getExMessage();
+        }
+        return false;
+    }
 }

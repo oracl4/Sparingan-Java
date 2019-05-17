@@ -75,6 +75,9 @@ public class Sparingan {
             System.out.println(schedulePtr);
         }
 
-        SpringApplication.run(Sparingan.class, args);
+        Implementation.finishSchedule(1, 1);
+        Implementation.finishSchedule(1, 2);
+
+        //SpringApplication.run(Sparingan.class, args);
     }
 }

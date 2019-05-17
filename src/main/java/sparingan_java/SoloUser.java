@@ -30,6 +30,7 @@ public class SoloUser extends User {
                 ", location='" + getLocation() + '\'' +
                 ", phoneNumber='" + getPhoneNumber() + '\'' +
                 ", password='" + getPassword() + '\'' +
+                ", rating='" + getRating() + '\'' +
                 ", email='" + getEmail() + '\'' +
                 ", id=" + getId() +
                 ", isScheduled=" + getIsScheduled() +

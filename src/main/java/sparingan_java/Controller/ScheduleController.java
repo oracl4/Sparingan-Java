@@ -5,6 +5,7 @@ import sparingan_java.*;
 
 import java.util.ArrayList;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 public class ScheduleController {
 

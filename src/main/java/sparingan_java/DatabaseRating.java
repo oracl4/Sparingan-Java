@@ -1,4 +1,5 @@
 package sparingan_java;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 /**
@@ -8,8 +9,14 @@ import java.util.HashMap;
  * @since 2019-05-17
  */
 public class DatabaseRating {
-
     private static HashMap<Integer, ArrayList<Rating>> ratingDatabase = new HashMap<>();
+
+    public static void createUserRatingDatabase(int id){
+
+        ArrayList<Rating> empty = new ArrayList<>();
+        ratingDatabase.put(id, empty );
+
+    }
 
     /**
      * menambah rating dari user
@@ -39,7 +46,7 @@ public class DatabaseRating {
      * @return ratingDatabase
      */
     public static ArrayList<Rating> getRating(int id) {
-       return ratingDatabase.get(id);
+        return ratingDatabase.get(id);
     }
 
     public HashMap<Integer, ArrayList<Rating>> getRatingDatabase() {

@@ -6,14 +6,14 @@ package sparingan_java;
  * @since 2019-05-17
  */
 public class Rating {
-    private User user;
+    private User fromUser;
     private String feedback;
     private double rating;
-    /**constructur untuk kelas Rating*
-    * @param user
-    */
-    public Rating(User user) {
-        this.user = user;
+
+    public Rating(User fromUser, double rating, String feedback) {
+        this.fromUser = fromUser;
+        this.rating = rating;
+        this.feedback = feedback;
     }
 
     /**
@@ -37,15 +37,11 @@ public class Rating {
      * @return user
      */
     public User getUser() {
-        return user;
+        return fromUser;
     }
 
-    /**
-     * method untuk melakukan set dari user
-     * @param user
-     */
-    public void setUser(User user) {
-        this.user = user;
+    public void setUser(User fromUser) {
+        this.fromUser = fromUser;
     }
 
     /**
@@ -70,7 +66,7 @@ public class Rating {
      */
     public String toString() {
         return "Rating{" +
-                "user=" + user +
+                "fromUser=" + fromUser +
                 ", feedback='" + feedback + '\'' +
                 ", rating=" + rating +
                 '}';

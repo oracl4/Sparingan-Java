@@ -1,8 +1,4 @@
-
 package sparingan_java;
-
-import java.util.ArrayList;
-
 /**
  * User.java - kelas untuk menjelaskan atribut dan method dari pengguna yang menggunakan sparingan web
  * @author  Gilang Yudharaka,Luthfi Faisal, Mahdi Yusuf,Michael Wijaya, Naufal Ikhsan
@@ -10,20 +6,28 @@ import java.util.ArrayList;
  * @since 2019-05-17
  */
 public abstract class User {
-
     /**
      * atribut dari user pengguna sparingan web
      */
     private String name, location, phoneNumber, password,email;
     private int id;
-    private Rating rating;
-<<<<<<< HEAD
     private double rating;
-=======
->>>>>>> parent of 130e4c3... Added RatingController, Fixed Rating system in user
-    //private Schedule userSchedules;
+
+    public void setRating(double rating) {
+        this.rating = rating;
+    }
+
+    private int scheduleID;
     private UserType userType;
     private boolean isScheduled;
+
+    public int getScheduleID() {
+        return scheduleID;
+    }
+
+    public void setScheduleID(int scheduleID) {
+        this.scheduleID = scheduleID;
+    }
 
     /**
      * method untuk melakukan pengambilan jadwal user
@@ -57,6 +61,7 @@ public abstract class User {
         this.email = email;
         this.isScheduled=false;
         this.id = DatabaseUser.getLastUserId() + 1;
+        rating = 0;
     }
 
     /**
@@ -75,7 +80,6 @@ public abstract class User {
         this.name = name;
     }
 
-<<<<<<< HEAD
     /**
      * method untuk mengambil rating berdasarkan id dari uer yang berasal dari database rating
      * @return rating
@@ -94,8 +98,6 @@ public abstract class User {
      * method untuk mengambil lokasi dari user
      * @return location
      */
-=======
->>>>>>> parent of 130e4c3... Added RatingController, Fixed Rating system in user
     public String getLocation() {
         return location;
     }

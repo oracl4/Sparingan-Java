@@ -6,6 +6,7 @@ import sparingan_java.*;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 public class MainController {
     //Find Match
@@ -21,5 +22,14 @@ public class MainController {
         Location tempLocation = Location.valueOf(location);
         Sport tempSport = Sport.valueOf(sport);
         return Implementation.findMatch(tempSport, tempDate, tempLocation, userid);
+    }
+
+    //Finish Schedule
+    @RequestMapping(value = "/finishmatch", method = RequestMethod.POST)
+    public Boolean findMatch (@RequestParam(value = "scheduleid") int idSchedule,
+                                @RequestParam(value = "userid") int idUser
+    ) {
+        boolean status = Implementation.finishSchedule(idSchedule, idUser);
+        return status;
     }
 }
