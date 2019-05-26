@@ -90,7 +90,6 @@ public abstract class User {
             for (Rating rate : DatabaseRating.getRating(id)){
                 rating = rating + rate.getRating();
             }
-            rating = rating / DatabaseRating.getRating(id).size();
         }
         return rating;
     }
