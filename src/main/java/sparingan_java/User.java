@@ -62,6 +62,7 @@ public abstract class User {
         this.isScheduled=false;
         this.id = DatabaseUser.getLastUserId() + 1;
         rating = 0;
+        DatabaseRating.createUserRatingDatabase(id);
     }
 
     /**
