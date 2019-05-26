@@ -39,7 +39,7 @@ public class Sparingan {
             System.out.println(DatabaseUser.getUser(DatabaseUser.getLastUserId()));
             //((TeamUser)DatabaseUser.getUser(3)).addMember(DatabaseUser.getUser(2));
             //((TeamUser)DatabaseUser.getUser(3)).addMember(DatabaseUser.getUser(1));
-            System.out.println(DatabaseUser.getUser(3));
+            //System.out.println(DatabaseUser.getUser(3));
         }
         /**
          * melakukan pemeriksaan error
