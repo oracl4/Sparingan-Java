@@ -9,7 +9,7 @@ package sparingan_java;
  */
 public enum Location {
     JAKARTA("Jakarta"),
-    DEPOK("Depok"),
+    BEKASI("Bekasi"),
     BOGOR("Bogor"),
     BANDUNG("Bandung");
 
