@@ -9,8 +9,9 @@ import java.util.HashMap;
  * @since 2019-05-17
  */
 public class DatabaseRating {
-    private static HashMap<Integer, ArrayList<Rating>> ratingDatabase = new HashMap<>();
 
+    private static HashMap<Integer, ArrayList<Rating>> ratingDatabase = new HashMap<>();
+    //Inisialisasi Key User tiap dibuat
     public static void createUserRatingDatabase(int id){
         ArrayList<Rating> empty = new ArrayList<>();
         ratingDatabase.put(id, empty );

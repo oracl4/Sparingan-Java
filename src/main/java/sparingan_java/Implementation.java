@@ -53,6 +53,7 @@ public class Implementation {
          */
         try {
             DatabaseSchedule.addSchedule(new Schedule(sport, date, location, DatabaseUser.getUser(userID)));
+            DatabaseUser.getUser(userID).setScheduleID(DatabaseSchedule.getLastScheduleId());
             return DatabaseSchedule.getSchedule(DatabaseSchedule.getLastScheduleId());
         } catch (UserNotFoundException e) {
             e.getExMessage();
@@ -70,7 +71,7 @@ public class Implementation {
             //Check if User isn't have schedule or the Schedule is inactive > Failed
             if(DatabaseUser.getUser(idUser).getScheduleID() == 0 || !DatabaseSchedule.getSchedule(idSchedule).getIsActive()) {
                 System.out.println("System Failed!");
-                return false;
+                //return false;
             }
 
             if(DatabaseSchedule.getSchedule(idSchedule).getUser1() != null) {

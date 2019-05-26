@@ -77,6 +77,7 @@ public class Sparingan {
         //Implementation.finishSchedule(1, 1);
         //Implementation.finishSchedule(1, 2);
 
+
         SpringApplication.run(Sparingan.class, args);
     }
 }
