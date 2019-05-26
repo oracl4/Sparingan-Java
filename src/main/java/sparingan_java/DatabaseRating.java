@@ -12,10 +12,8 @@ public class DatabaseRating {
     private static HashMap<Integer, ArrayList<Rating>> ratingDatabase = new HashMap<>();
 
     public static void createUserRatingDatabase(int id){
-
         ArrayList<Rating> empty = new ArrayList<>();
         ratingDatabase.put(id, empty );
-
     }
 
     /**

@@ -40,8 +40,11 @@ public class Implementation {
                 schedulePtr.setIsActive(true);
                 schedulePtr.getUser1().setIsScheduled(true);
                 schedulePtr.getUser1().setScheduleID(schedulePtr.getId());
+                schedulePtr.getUser1().setEnemyID(userID);
+
                 schedulePtr.getUser2().setIsScheduled(true);
                 schedulePtr.getUser2().setScheduleID(schedulePtr.getId());
+                schedulePtr.getUser2().setEnemyID(schedulePtr.getUser1().getId());
                 return schedulePtr;
             }
         }

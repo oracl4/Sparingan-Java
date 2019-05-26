@@ -10,7 +10,7 @@ public abstract class User {
      * atribut dari user pengguna sparingan web
      */
     private String name, location, phoneNumber, password,email;
-    private int id;
+    private int id, enemyID;
     private double rating;
 
     public void setRating(double rating) {
@@ -61,6 +61,7 @@ public abstract class User {
         this.email = email;
         this.isScheduled=false;
         this.id = DatabaseUser.getLastUserId() + 1;
+        this.enemyID = 0;
         rating = 0;
         DatabaseRating.createUserRatingDatabase(id);
     }
@@ -79,6 +80,14 @@ public abstract class User {
      */
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getEnemyID() {
+        return enemyID;
+    }
+
+    public void setEnemyID(int enemyID) {
+        this.enemyID = enemyID;
     }
 
     /**
