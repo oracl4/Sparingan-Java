@@ -68,11 +68,11 @@ public class Implementation {
 
     public static boolean finishSchedule(int idSchedule, int idUser){
         try {
-            //Check if User isn't have schedule or the Schedule is inactive > Failed
+            /*Check if User isn't have schedule or the Schedule is inactive > Failed
             if(DatabaseUser.getUser(idUser).getScheduleID() == 0 || !DatabaseSchedule.getSchedule(idSchedule).getIsActive()) {
                 System.out.println("System Failed!");
                 //return false;
-            }
+            }*/
 
             if(DatabaseSchedule.getSchedule(idSchedule).getUser1() != null) {
                 if(DatabaseSchedule.getSchedule(idSchedule).getUser1().getId() == idUser){
@@ -100,8 +100,6 @@ public class Implementation {
             }
 
         } catch (ScheduleNotFoundException e) {
-            e.getExMessage();
-        } catch (UserNotFoundException e) {
             e.getExMessage();
         }
         return false;
