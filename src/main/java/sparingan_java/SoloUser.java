@@ -34,6 +34,8 @@ public class SoloUser extends User {
                 ", email='" + getEmail() + '\'' +
                 ", id=" + getId() +
                 ", isScheduled=" + getIsScheduled() +
+                ", Level=" + getUserLevel() +
+                ", totalMatch =" + getTotalMatch() +
                 '}';
     }
 }

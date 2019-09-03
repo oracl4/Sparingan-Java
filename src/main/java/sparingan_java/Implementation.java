@@ -1,5 +1,6 @@
 package sparingan_java;
 
+import javax.xml.crypto.Data;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -23,6 +24,24 @@ public class Implementation {
      * @return null
      */
     public static Schedule findMatch(Sport sport, Calendar date, Location location, int userID) {
+
+        int sameLevelScheduleNumber = 0;
+        int scheduleNumber = 0;
+
+        //Update User Level based on totalMatch
+        try {
+            if(DatabaseUser.getUser(userID).getTotalMatch() > 50){
+                System.out.println("Elite");
+                DatabaseUser.getUser(userID).setUserLevel(Level.ELITE);
+            }
+            else if(DatabaseUser.getUser(userID).getTotalMatch() > 20){
+                System.out.println("Beginner");
+                DatabaseUser.getUser(userID).setUserLevel(Level.MODERATE);
+            }
+        } catch (UserNotFoundException e) {
+            e.getExMessage();
+        }
+
         /**
          * mengambil jadwal user
          */
@@ -33,21 +52,48 @@ public class Implementation {
                     !schedulePtr.getIsActive()
             ) {
                 try {
-                    schedulePtr.setUser2(DatabaseUser.getUser(userID));
+                    //User with Same Level
+                    if(schedulePtr.getUser1().getUserLevel().equals(DatabaseUser.getUser(userID).getUserLevel())) {
+                        //System.out.println("Same Level");
+                        sameLevelScheduleNumber = schedulePtr.getId();
+                    }
+                    //User without Same Level
+                    else{
+                        //System.out.println("!Same Level");
+                        scheduleNumber = schedulePtr.getId();
+                    }
                 } catch (UserNotFoundException e) {
                     e.getExMessage();
                 }
-                schedulePtr.setIsActive(true);
-                schedulePtr.getUser1().setIsScheduled(true);
-                schedulePtr.getUser1().setScheduleID(schedulePtr.getId());
-                schedulePtr.getUser1().setEnemyID(userID);
-
-                schedulePtr.getUser2().setIsScheduled(true);
-                schedulePtr.getUser2().setScheduleID(schedulePtr.getId());
-                schedulePtr.getUser2().setEnemyID(schedulePtr.getUser1().getId());
-                return schedulePtr;
             }
         }
+
+        if(sameLevelScheduleNumber != 0 ){
+            scheduleNumber = sameLevelScheduleNumber;
+        }
+
+        //Check if Schedule Number is Zero
+        if(scheduleNumber != 0){
+            try {
+                //System.out.println("Here");
+                DatabaseSchedule.getSchedule(scheduleNumber).setUser2(DatabaseUser.getUser(userID));
+
+                DatabaseSchedule.getSchedule(scheduleNumber).setIsActive(true);
+                DatabaseSchedule.getSchedule(scheduleNumber).getUser1().setIsScheduled(true);
+                DatabaseSchedule.getSchedule(scheduleNumber).getUser1().setScheduleID(DatabaseSchedule.getSchedule(scheduleNumber).getId());
+                DatabaseSchedule.getSchedule(scheduleNumber).getUser1().setEnemyID(userID);
+
+                DatabaseSchedule.getSchedule(scheduleNumber).getUser2().setIsScheduled(true);
+                DatabaseSchedule.getSchedule(scheduleNumber).getUser2().setScheduleID(DatabaseSchedule.getSchedule(scheduleNumber).getId());
+                DatabaseSchedule.getSchedule(scheduleNumber).getUser2().setEnemyID(DatabaseSchedule.getSchedule(scheduleNumber).getUser1().getId());
+                return DatabaseSchedule.getSchedule(scheduleNumber);
+            } catch (ScheduleNotFoundException e) {
+                e.getExMessage();
+            } catch (UserNotFoundException e) {
+                e.getExMessage();
+            }
+        }
+
         /**
          * jika tidak ada yanng match dengan jadwal maka dikembalikan ke databaseSchedule untuk daftar tunggu
          */
@@ -76,10 +122,12 @@ public class Implementation {
 
             if(DatabaseSchedule.getSchedule(idSchedule).getUser1() != null) {
                 if(DatabaseSchedule.getSchedule(idSchedule).getUser1().getId() == idUser){
-                    System.out.println("Removed User1");
+                    //System.out.println("Removed User1");
                     DatabaseSchedule.getSchedule(idSchedule).getUser1().setIsScheduled(false);
                     DatabaseSchedule.getSchedule(idSchedule).getUser1().setScheduleID(0);
                     DatabaseSchedule.getSchedule(idSchedule).setUser1(null);
+                    //Increment Total Match After Finishing Match
+                    DatabaseUser.getUser(idUser).setTotalMatch((DatabaseUser.getUser(idUser).getTotalMatch())+1);
                 }
             }
 
@@ -89,6 +137,8 @@ public class Implementation {
                     DatabaseSchedule.getSchedule(idSchedule).getUser2().setIsScheduled(false);
                     DatabaseSchedule.getSchedule(idSchedule).getUser2().setScheduleID(0);
                     DatabaseSchedule.getSchedule(idSchedule).setUser2(null);
+                    //Increment Total Match After Finishing Match
+                    DatabaseUser.getUser(idUser).setTotalMatch((DatabaseUser.getUser(idUser).getTotalMatch())+1);
                 }
             }
 
@@ -100,6 +150,8 @@ public class Implementation {
             }
 
         } catch (ScheduleNotFoundException e) {
+            e.getExMessage();
+        } catch (UserNotFoundException e) {
             e.getExMessage();
         }
         return false;

@@ -12,14 +12,24 @@ public abstract class User {
     private String name, location, phoneNumber, password,email;
     private int id, enemyID;
     private double rating;
+    private int scheduleID;
+    private UserType userType;
+    private boolean isScheduled;
+    private Level userLevel;
+
+    private int totalMatch;
+
+    public int getTotalMatch() {
+        return totalMatch;
+    }
+
+    public void setTotalMatch(int totalMatch) {
+        this.totalMatch = totalMatch;
+    }
 
     public void setRating(double rating) {
         this.rating = rating;
     }
-
-    private int scheduleID;
-    private UserType userType;
-    private boolean isScheduled;
 
     public int getScheduleID() {
         return scheduleID;
@@ -62,6 +72,8 @@ public abstract class User {
         this.isScheduled=false;
         this.id = DatabaseUser.getLastUserId() + 1;
         this.enemyID = 0;
+        this.totalMatch = 0;
+        this.userLevel = Level.BEGINNER;
         rating = 0;
         DatabaseRating.createUserRatingDatabase(id);
     }
@@ -191,6 +203,14 @@ public abstract class User {
         this.userSchedules = userSchedules;
     }
      */
+
+    public Level getUserLevel() {
+        return userLevel;
+    }
+
+    public void setUserLevel(Level userLevel) {
+        this.userLevel = userLevel;
+    }
 
     /**
      * method abstact untuk melakukan toString terhadap atribut user

@@ -12,13 +12,13 @@ public class MainController {
     //Find Match
     @RequestMapping(value = "/findmatch", method = RequestMethod.POST)
     public Schedule findMatch (@RequestParam(value = "sport") String sport,
-                                @RequestParam(value = "year") int date,
+                                @RequestParam(value = "year") int year,
                                 @RequestParam(value = "month") int month,
-                                @RequestParam(value = "date") int year,
+                                @RequestParam(value = "date") int date,
                                 @RequestParam(value = "location") String location,
                                 @RequestParam(value = "userid") int userid
     ) {
-        Calendar tempDate = new GregorianCalendar(date,month,year);
+        Calendar tempDate = new GregorianCalendar(year, month - 1, date);
         Location tempLocation = Location.valueOf(location);
         Sport tempSport = Sport.valueOf(sport);
         return Implementation.findMatch(tempSport, tempDate, tempLocation, userid);

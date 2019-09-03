@@ -55,6 +55,8 @@ public class TeamUser extends User {
                             ", email='" + getEmail() + '\'' +
                             ", id=" + getId() +
                             ", isScheduled=" + getIsScheduled() +
+                            ", Level=" + getUserLevel() +
+                            ", totalMatch =" + getTotalMatch() +
                             '}';
         int i=0;
         for(User userPtr : teamGroup){
@@ -67,6 +69,8 @@ public class TeamUser extends User {
                         ", email='" + userPtr.getEmail() + '\'' +
                         ", id=" + userPtr.getId() +
                         ", isScheduled=" + userPtr.getIsScheduled() +
+                        ", Level=" + userPtr.getUserLevel() +
+                        ", totalMatch =" + userPtr.getTotalMatch() +
                         '}';
                 i++;
         }
